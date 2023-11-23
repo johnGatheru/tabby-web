@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&family=Roboto:ital,wght@0,300;0,500;0,700;0,900;1,100;1,500&display=swap"
+      rel="stylesheet"
+    />
+    <title>Tabby's restuarant</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    .main {
+      width: 100%;
+      height: 20%;
+      display: flex;
+    }
+    .top-maq {
+      width: 100%;
+      height: 7vh;
+      background-color: goldenrod;
+      align-items: center;
+      display: flex;
+      font-weight: bolder;
+      color: white;
+      position: static;
+    }
+    .right-content,
+    .top-content {
+      flex: 1;
+    }
+    .right-content {
+      border-bottom-left-radius: 6em;
+      overflow: hidden;
+      position: relative;
+    }
+    .maq {
+      display: flex;
+      align-items: center;
+      gap: 4em;
+    }
+    .top-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 7%;
+      margin-left: 3%;
+    }
+    .head-main {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-right: 2em;
+    }
+    .title-main {
+      font-size: 60px;
+      color: blueviolet;
+      text-decoration: underline;
+      text-decoration-style: wavy;
+      margin-bottom: 0.5em;
+    }
+    body {
+      font-family: "Roboto", sans-serif;
+      font-family: "Roboto Condensed", sans-serif;
+      background-color: rgb(234, 234, 234);
+    }
+    .btn {
+      display: flex;
+      width: 100%;
+      justify-content: start;
+    }
+    .btn-main {
+      background-color: rgb(120, 67, 170);
+      color: white;
+      font-weight: bolder;
+      border: none;
+      border-radius: 10px;
+      transition: 1s all;
+    }
+    .main-button {
+      padding: 1em 3em;
+      margin-top: 2em;
+    }
+    .order-btn {
+      padding: 0.7em 4em;
+      margin-top: 1em;
+      width: fit-content;
+    }
+    .btn-main:hover {
+      cursor: pointer;
+      background-color: rgb(160, 123, 195);
+    }
+    .center-content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin: 1em;
+    }
+    .card {
+      display: flex;
+      flex-direction: column;
+      padding: 1em;
+      border-radius: 10px;
+      border: 1px solid rgb(194, 194, 194);
+      width: 17em;
+      margin-bottom: 1em;
+      background-color: rgb(224, 224, 224);
+    }
+    .card img {
+      border-radius: 15px;
+      transition: 0.2s all;
+    }
+    .card img:hover {
+      scale: 1.01;
+    }
+    .food-title {
+      margin-top: 1em;
+      margin-bottom: 0.5em;
+    }
+    .footer {
+      display: flex;
+      align-items: center;
+      color: white;
+      padding: 2em;
+      background-color: rgb(49, 7, 87);
+      justify-content: space-between;
+    }
+    .footer-main {
+      font-weight: bold;
+      text-transform: capitalize;
+    }
+    .footer-small {
+      font-size: small;
+      margin: 0.3em 0;
+    }
+    .footer-small:hover {
+      cursor: pointer;
+      text-decoration: underline;
+    }
+    .over-content {
+      position: absolute;
+      bottom: 2em;
+      left: 2em;
+      font-weight: bolder;
+      color: blueviolet;
+      background-color: rgb(188, 185, 185, 0.7);
+      padding: 1em;
+      border-radius: 20px;
+      font-size: 1.5em;
+      width: 50%;
+    }
+  </style>
+  <body>
+    <div class="">
+      <div class="top-maq">
+        <marquee behavior="scroll" direction="left" scrollamount="5">
+          <div class="maq">
+            <span> <img src="./images/food1.jpeg" alt="" width="50" /> </span>
+            <p>
+              Welcome to the Happy weekends where we offer 50% Discount and free
+              Delivery!
+            </p>
+            <span> <img src="./images/food3.jpeg" alt="" width="50" /> </span>
+          </div>
+        </marquee>
+      </div>
+      <div class="main">
+        <div class="top-content">
+          <h1 class="head-main">
+            <span class="title-main">Welcome to Tabby's Restuarant,</span>
+            <span>
+              where culinary delights await your senses. Enjoy the extraordinary
+              flavors!
+            </span>
+          </h1>
+          <div class="btn">
+            <button class="btn-main main-button">Enjoy your Delicacy</button>
+          </div>
+        </div>
+        <div class="right-content">
+          <img src="./images/eating3.jpg" alt="" />
+          <div class="over-content">
+            Enjoy our varous delicacy from our maverous suppliers
+          </div>
+        </div>
+      </div>
+      <div class="center-content">
+        <div class="card">
+          <img src="./images/food3.jpeg" alt="" width="270" height="200" />
+          <h4 class="food-title">Maromo</h4>
+          <p>
+            Maromo food from majulie with omena 4. It improves your energy in
+            the body and kills minyoo very fast
+          </p>
+          <button class="btn-main order-btn">Order</button>
+        </div>
+        <div class="card">
+          <img src="./images/food4.jpeg" alt="" width="270" height="200" />
+          <h4 class="food-title">Maromo</h4>
+          <p>
+            Maromo food from majulie with omena 4. It improves your energy in
+            the body and kills minyoo very fast
+          </p>
+          <button class="btn-main order-btn">Order</button>
+        </div>
+        <div class="card">
+          <img src="./images/food2.jpeg" alt="" width="270" height="200" />
+          <h4 class="food-title">Maromo</h4>
+          <p>
+            Maromo food from majulie with omena 4. It improves your energy in
+            the body and kills minyoo very fast
+          </p>
+          <button class="btn-main order-btn">Order</button>
+        </div>
+        <div class="card">
+          <img src="./images/food6.jpeg" alt="" width="270" height="200" />
+          <h4 class="food-title">Maromo</h4>
+          <p>
+            Maromo food from majulie with omena 4. It improves your energy in
+            the body and kills minyoo very fast
+          </p>
+          <button class="btn-main order-btn">Order</button>
+        </div>
+        <div class="card">
+          <img src="./images/food7.jpeg" alt="" width="270" height="200" />
+          <h4 class="food-title">Maromo</h4>
+          <p>
+            Maromo food from majulie with omena 4. It improves your energy in
+            the body and kills minyoo very fast
+          </p>
+          <button class="btn-main order-btn">Order</button>
+        </div>
+        <div class="card">
+          <img src="./images/food.jpeg" alt="" width="270" height="200" />
+          <h4 class="food-title">Maromo</h4>
+          <p>
+            Maromo food from majulie with omena 4. It improves your energy in
+            the body and kills minyoo very fast
+          </p>
+          <button class="btn-main order-btn">Order</button>
+        </div>
+        <div class="card">
+          <img src="./images/food3.jpeg" alt="" width="270" height="200" />
+          <h4 class="food-title">Maromo</h4>
+          <p>
+            Maromo food from majulie with omena 4. It improves your energy in
+            the body and kills minyoo very fast
+          </p>
+          <button class="btn-main order-btn">Order</button>
+        </div>
+        <div class="card">
+          <img src="./images/food3.jpeg" alt="" width="270" height="200" />
+          <h4 class="food-title">Maromo</h4>
+          <p>
+            Maromo food from majulie with omena 4. It improves your energy in
+            the body and kills minyoo very fast
+          </p>
+          <button class="btn-main order-btn">Order</button>
+        </div>
+        <div class="card">
+          <img src="./images/food3.jpeg" alt="" width="270" height="200" />
+          <h4 class="food-title">Maromo</h4>
+          <p>
+            Maromo food from majulie with omena 4. It improves your energy in
+            the body and kills minyoo very fast
+          </p>
+          <button class="btn-main order-btn">Order</button>
+        </div>
+      </div>
+      <div class="footer">
+        <div class="footer-content">
+          <div class="footer-main">Home</div>
+          <div class="footer-small">View All</div>
+          <div class="footer-small">Deliveries</div>
+          <div class="footer-small">Nutrition</div>
+        </div>
+        <div class="footer-content">
+          <div class="footer-main">Contact Us</div>
+          <div class="footer-small">P.O Box 56789</div>
+          <div class="footer-small">Machakos</div>
+          <div class="footer-small">tabbykabai32@gmail.com</div>
+          <div class="footer-small">0740593178</div>
+        </div>
+        <div class="footer-content">
+          <div class="footer-main">Location</div>
+          <div class="footer-small">Muthini Building</div>
+          <div class="footer-small">Machakos Town</div>
+          <div class="footer-small">Opposite Mwosho Mmoja</div>
+        </div>
+        <div class="footer-content">
+          <div class="footer-main">About Us</div>
+          <div class="footer-small">Food Delicacy</div>
+          <div class="footer-small">Drinks Jororo</div>
+          <div class="footer-small">Uji Mint</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
