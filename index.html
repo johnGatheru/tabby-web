@@ -10,6 +10,22 @@
       rel="stylesheet"
     />
     <title>Tabby's restuarant</title>
+    <script>
+      function showFancyAlert(message) {
+        const fancyEffect = document.getElementById("fancyEffect");
+        fancyEffect.textContent =
+          "Thank you very much, you just ordered" +
+          " " +
+          message +
+          " " +
+          "We will deliver shortly";
+        fancyEffect.style.display = "block";
+
+        setTimeout(() => {
+          fancyEffect.style.display = "none";
+        }, 3000);
+      }
+    </script>
   </head>
   <style>
     * {
@@ -97,6 +113,7 @@
       background-color: rgb(160, 123, 195);
     }
     .center-content {
+      position: relative;
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
@@ -155,9 +172,39 @@
       font-size: 1.5em;
       width: 50%;
     }
+    .alert-main {
+      right: 0;
+      top: 50%;
+      display: flex;
+      position: absolute;
+      z-index: 20;
+    }
+    .main-main {
+      position: relative;
+      height: 100%;
+    }
+    #fancyEffect {
+      display: none;
+      font-size: 24px;
+      font-weight: bold;
+      background-color: #4caf50;
+      border-radius: 2em;
+      padding: 0.5em 4em;
+      color: white;
+      animation: fadeIn 1s ease-out;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
   </style>
   <body>
-    <div class="">
+    <div class="main-main">
       <div class="top-maq">
         <marquee behavior="scroll" direction="left" scrollamount="5">
           <div class="maq">
@@ -170,6 +217,7 @@
           </div>
         </marquee>
       </div>
+
       <div class="main">
         <div class="top-content">
           <h1 class="head-main">
@@ -179,6 +227,7 @@
               flavors!
             </span>
           </h1>
+
           <div class="btn">
             <button class="btn-main main-button">Enjoy your Delicacy</button>
           </div>
@@ -191,86 +240,120 @@
         </div>
       </div>
       <div class="center-content">
+        <div class="alert-main">
+          <div id="fancyEffect"></div>
+        </div>
         <div class="card">
           <img src="./images/food3.jpeg" alt="" width="270" height="200" />
-          <h4 class="food-title">Maromo</h4>
+          <h4 class="food-title">Bread</h4>
           <p>
-            Maromo food from majulie with omena 4. It improves your energy in
-            the body and kills minyoo very fast
+            This is portable and easily available and very good for breakfast
+            since its light
           </p>
-          <button class="btn-main order-btn">Order</button>
+          <button class="btn-main order-btn" onclick="showFancyAlert('Bread!')">
+            Order
+          </button>
         </div>
         <div class="card">
           <img src="./images/food4.jpeg" alt="" width="270" height="200" />
-          <h4 class="food-title">Maromo</h4>
+          <h4 class="food-title">Burger</h4>
           <p>
-            Maromo food from majulie with omena 4. It improves your energy in
-            the body and kills minyoo very fast
+            For breakfast and to eat while walking its portable and delicious
           </p>
-          <button class="btn-main order-btn">Order</button>
+          <button
+            class="btn-main order-btn"
+            onclick="showFancyAlert('Burger!')"
+          >
+            Order
+          </button>
         </div>
         <div class="card">
-          <img src="./images/food2.jpeg" alt="" width="270" height="200" />
-          <h4 class="food-title">Maromo</h4>
+          <img src="./images/ugali.jpeg" alt="" width="270" height="200" />
+          <h4 class="food-title">ugalipork</h4>
           <p>
-            Maromo food from majulie with omena 4. It improves your energy in
-            the body and kills minyoo very fast
+            This food is also available in affordable prices hurray and get
+            yours today
           </p>
-          <button class="btn-main order-btn">Order</button>
+          <button
+            class="btn-main order-btn"
+            onclick="showFancyAlert('Ugali pork!')"
+          >
+            Order
+          </button>
         </div>
         <div class="card">
-          <img src="./images/food6.jpeg" alt="" width="270" height="200" />
-          <h4 class="food-title">Maromo</h4>
+          <img
+            src="./images/sweet potatoes.jpeg"
+            alt=""
+            width="270"
+            height="200"
+          />
+          <h4 class="food-title">Sweet Potatoes</h4>
           <p>
-            Maromo food from majulie with omena 4. It improves your energy in
-            the body and kills minyoo very fast
+            Sweet potatoes are good because they can be taken anywhere at any
+            place and at any time .order yours today
           </p>
-          <button class="btn-main order-btn">Order</button>
+          <button
+            class="btn-main order-btn"
+            onclick="showFancyAlert('Sweet Potatoes!')"
+          >
+            Order
+          </button>
         </div>
         <div class="card">
-          <img src="./images/food7.jpeg" alt="" width="270" height="200" />
-          <h4 class="food-title">Maromo</h4>
+          <img src="./images/mukiimo.jpeg" alt="" width="270" height="200" />
+          <h4 class="food-title">Mukimo</h4>
           <p>
-            Maromo food from majulie with omena 4. It improves your energy in
-            the body and kills minyoo very fast
+            We prepare traditional food that is very delicious and in good
+            amount that is helpful to provide energy in the body and
+            warmthonclick="showFancyAlert('Hello!')" during rainy seasons
           </p>
-          <button class="btn-main order-btn">Order</button>
+          <button
+            class="btn-main order-btn"
+            onclick="showFancyAlert('Mukimo!')"
+          >
+            Order
+          </button>
         </div>
         <div class="card">
           <img src="./images/food.jpeg" alt="" width="270" height="200" />
-          <h4 class="food-title">Maromo</h4>
+          <h4 class="food-title">Noodles</h4>
           <p>
-            Maromo food from majulie with omena 4. It improves your energy in
-            the body and kills minyoo very fast
+            The noodles are good and fast to prepare. they are light foods and
+            very delicious. order yours today and we provide to the doorstep
           </p>
-          <button class="btn-main order-btn">Order</button>
+          <button
+            class="btn-main order-btn"
+            onclick="showFancyAlert('Noodles!')"
+          >
+            Order
+          </button>
         </div>
         <div class="card">
-          <img src="./images/food3.jpeg" alt="" width="270" height="200" />
-          <h4 class="food-title">Maromo</h4>
+          <img src="./images/milk.jpeg" alt="" width="270" height="200" />
+          <h4 class="food-title">Milk</h4>
           <p>
-            Maromo food from majulie with omena 4. It improves your energy in
-            the body and kills minyoo very fast
+            Milk provides proteins to the body we provide fresh band fermented
+            milk at affordable prices. order yours today
           </p>
-          <button class="btn-main order-btn">Order</button>
+          <button class="btn-main order-btn" onclick="showFancyAlert('Milk!')">
+            Order
+          </button>
         </div>
         <div class="card">
-          <img src="./images/food3.jpeg" alt="" width="270" height="200" />
-          <h4 class="food-title">Maromo</h4>
+          <img src="./images/fruit.jpeg" alt="" width="270" height="200" />
+          <h4 class="food-title">Fruit juice</h4>
           <p>
-            Maromo food from majulie with omena 4. It improves your energy in
-            the body and kills minyoo very fast
+            Fruit juice is suitable for body nourishment and adding vitamins to
+            body therefore protecting the body from diseases
           </p>
-          <button class="btn-main order-btn">Order</button>
-        </div>
-        <div class="card">
-          <img src="./images/food3.jpeg" alt="" width="270" height="200" />
-          <h4 class="food-title">Maromo</h4>
-          <p>
-            Maromo food from majulie with omena 4. It improves your energy in
-            the body and kills minyoo very fast
-          </p>
-          <button class="btn-main order-btn">Order</button>
+
+          <button
+            class="btn-main order-btn"
+            onclick="showFancyAlert('Fruit Juice!')"
+          >
+            Order
+          </button>
         </div>
       </div>
       <div class="footer">
